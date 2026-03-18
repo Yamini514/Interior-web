@@ -15,10 +15,10 @@ export function ContactMainSection({ innerRef, info, onSuccess, phone }) {
           <h2 className="mt-3 text-3xl text-white" style={{ fontFamily: 'var(--font-display)' }}>
             Reach out directly or share your project brief through the form.
           </h2>
-          <p className="mt-4 text-sm leading-7 text-stone-300">
+          {/* <p className="mt-4 text-sm leading-7 text-stone-300">
             The layout keeps the form spacious and easy to complete while the studio details stay
             visible and accessible.
-          </p>
+          </p> */}
 
           <Motion.div
             initial="hidden"
@@ -58,7 +58,7 @@ export function ContactMainSection({ innerRef, info, onSuccess, phone }) {
             <GradientButton to={`https://wa.me/${phone.replace(/[^\d]/g, '')}`}>WhatsApp</GradientButton>
           </div>
 
-          <div className="mt-6 rounded-[28px] border border-white/12 bg-white/8 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.2)] backdrop-blur-xl">
+          {/* <div className="mt-6 rounded-[28px] border border-white/12 bg-white/8 p-5 shadow-[0_24px_80px_rgba(15,23,42,0.2)] backdrop-blur-xl">
             <p className="text-xs uppercase tracking-[0.28em] text-amber-200/75">Quick Links</p>
             <div className="mt-4 flex flex-wrap gap-3">
               <AppLink
@@ -74,7 +74,7 @@ export function ContactMainSection({ innerRef, info, onSuccess, phone }) {
                 Explore Services
               </AppLink>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
