@@ -17,11 +17,17 @@ export function navigateTo(pathname) {
   window.dispatchEvent(new PopStateEvent('popstate'))
 }
 
-export function AppLink({ children, className, to, ...props }) {
+export function AppLink({ children, className, onClick, to, ...props }) {
   const isExternal =
     !to || to.startsWith('http') || to.startsWith('mailto:') || to.startsWith('tel:') || to.startsWith('#')
 
   const handleClick = (event) => {
+    onClick?.(event)
+
+    if (event.defaultPrevented) {
+      return
+    }
+
     if (isExternal || isModifiedEvent(event) || props.target === '_blank') {
       return
     }
