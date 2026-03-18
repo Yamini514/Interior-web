@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+:root {
+  --bg-base: #0b0c10;
+  --bg-elevated: #12151a;
+  --text-primary: #f7f1e8;
+  --text-secondary: #c4b7a8;
+  --text-muted: #9e9184;
+  --accent-soft: #e5ba93;
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-body: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(201, 132, 78, 0.12), transparent 28%),
+    linear-gradient(180deg, #121316 0%, #0b0c10 45%, #13161b 100%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 34%, transparent 85%);
+  pointer-events: none;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
